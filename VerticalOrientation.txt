@@ -849,8 +849,8 @@ FF16 ; U
 FF17 ; U
 FF18 ; U
 FF19 ; U
-FF1A ; U ;： 
-FF1B ; U ;；
+FF1A ; U
+FF1B ; R
 FF1C ; R
 FF1D ; R
 FF1E ; R
