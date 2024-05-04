@@ -158,7 +158,7 @@ def main():
                     for st in tagmap[tag]:
                         delete = False
                         for row in g.getPosSub(st):
-                            if font.selection[font[row[2]]]:
+                            if row[2] != -1 and font.selection[font[row[2]]]:
                                 #TODO: delete only this row
                                 delete = True
                                 break
