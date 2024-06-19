@@ -82,7 +82,7 @@
 00B4 ; R
 00B5 ; R
 00B6 ; R
-00B7 ; R
+#00B7 ; R
 00B8 ; R
 00B9 ; R
 00BA ; R
@@ -443,8 +443,8 @@
 2FE0..2FEF ; U
 2FF0..2FFF ; U
 3000 ; U
-3001 ; Tu
-3002 ; Tu
+3001 ; R
+#3002 ; Tu
 3003 ; U
 3004 ; U
 3005 ; U
@@ -793,9 +793,9 @@ FE4C ; R
 FE4D ; R
 FE4E ; R
 FE4F ; R
-FE50 ; Tu
-FE51 ; Tu
-FE52 ; Tu
+FE50 ; R
+FE51 ; U
+FE52 ; R
 FE53 ; U
 FE54 ; U
 FE55 ; U
@@ -824,7 +824,7 @@ FE6B ; U
 FE6C..FE6F ; U
 FE70..FEFF ; R
 FF00 ; R
-FF01 ; Tu
+FF01 ; R
 FF02 ; U
 FF03 ; U
 FF04 ; U
@@ -835,7 +835,7 @@ FF08 ; Tr
 FF09 ; Tr
 FF0A ; U
 FF0B ; U
-FF0C ; Tu
+FF0C ; U
 FF0D ; R
 FF0E ; Tu
 FF0F ; U
@@ -854,7 +854,7 @@ FF1B ; U ;；
 FF1C ; R
 FF1D ; R
 FF1E ; R
-FF1F ; Tu
+FF1F ; R
 FF20 ; U
 FF21..FF3A ; U
 FF3B ; Tr

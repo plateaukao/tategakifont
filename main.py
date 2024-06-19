@@ -110,10 +110,20 @@ def main():
         font.cidFlatten()
 
     # Modify name
+    print("Fontname:",font.fontname)
+    print("Fullname:",font.fullname)
+    print("Familyname:",font.familyname)
     if font.fontname is not None:
-        font.fontname+="-Rotated"
+        font.fontname = font.fontname.split('-')[0] + "Rotated"
     if font.fullname is not None:
-        font.fullname+=" Rotated"
+        font.fullname = font.fullname.split('-')[0] + "Rotated"
+    if font.familyname is not None:
+        font.familyname +=" Rotated"
+    font.sfnt_names = []
+
+    print("Fontname:",font.fontname)
+    print("Fullname:",font.fullname)
+    print("Familyname:",font.familyname)
 
     fill_tagmap(font)
 
@@ -157,11 +167,14 @@ def main():
                 if tag in tagmap:
                     for st in tagmap[tag]:
                         delete = False
-                        for row in g.getPosSub(st):
-                            if row[2] != -1 and font.selection[font[row[2]]]:
-                                #TODO: delete only this row
-                                delete = True
-                                break
+                        try:
+                            for row in g.getPosSub(st):
+                                if row[2] != -1 and font.selection[font[row[2]]]:
+                                    #TODO: delete only this row
+                                    delete = True
+                                    break
+                        except TypeError:
+                            print("IndexError")
                         if delete:
                             g.removePosSub(st)
 
